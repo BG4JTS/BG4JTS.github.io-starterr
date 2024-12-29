@@ -105,6 +105,7 @@ avatar: "https://img520.com/Up2qfs.jpg"
 # The URL of the site-wide social preview image used in SEO `og:image` meta tag.
 # It can be overridden by a customized `page.image` in front matter.
 social_preview_image: # string, local or CORS resources
+favicon: /assets/img/favicons/avicon32x32.ico
 
 # boolean type, the global switch for TOC in posts.
 toc: true
@@ -237,8 +238,17 @@ gitalk:
 
 
 
-#plugins:
-#  - jekyll-multiple-languages-plugin
+# plugins:
+# #  - jekyll-multiple-languages-plugin
+#   - jekyll-minibundle
+#   - jekyll-include-cache
+
+# #-------------Jekyll Minibundl-------------
+# minibundle: true
+# assets_dir: assets
+# compress_level: 3
+
+
 
 #languages:
 #  - en
