@@ -15,9 +15,4 @@ gem "wdm", "~> 0.2.0", :platforms => [:mingw, :x64_mingw, :mswin]
 gem 'logger'
 gem 'csv'
 gem 'base64'
-gem 'jekyll-minifier'
-# gem 'jekyll-static-comments'
-
 # gem 'jekyll-multiple-languages-plugin'
-
-gem "webrick", "~> 1.9"
