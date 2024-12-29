@@ -1,5 +1,6 @@
 # The layout text of site
-
+name:
+  en: English
 # ----- Commons label -----
 
 layout:
