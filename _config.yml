@@ -227,6 +227,14 @@ jekyll-archives:
     tag: /tags/:name/
     category: /categories/:name/
 
+gitalk:
+  clientID: 'your_client_id'
+  clientSecret: 'your_client_secret'
+  repo: 'your_repo'
+  owner: 'your_username'
+  admin: ['your_username']
+  distractionFreeMode: false
+
 
 
 #plugins:
