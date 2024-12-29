@@ -1,0 +1,59 @@
+<!-- _layouts/post.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- 其他头部元素 -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }}</title>
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <!-- Utterances CSS 链接 -->
+  <link rel="stylesheet" href="https://utteranc.es/css/theme.css">
+</head>
+<body>
+  <!-- 页眉 -->
+  <header>
+    <div class="site-header">
+      <div class="site-header-brand">
+        <a href="{{ site.baseurl_root }}{{ site.baseurl }}">{{ site.title }}</a>
+      </div>
+      <div class="site-header-nav">
+        <a href="{{ site.baseurl_root }}{{ site.baseurl }}">Home</a>
+        <a href="/about">About</a>
+        <!-- 添加更多导航链接 -->
+      </div>
+    </div>
+  </header>
+
+  <!-- 导航栏 -->
+  <nav>
+    <ul class="nav-links">
+      <li><a href="{{ site.baseurl_root }}{{ site.baseurl }}">Home</a></li>
+      <li><a href="/about">About</a></li>
+      <!-- 添加更多导航链接 -->
+    </ul>
+  </nav>
+
+  <!-- 页面主要内容 -->
+  <main>
+    <article>
+      {{ content }}
+    </article>
+  </main>
+
+  <!-- 底部评论系统 -->
+  <footer>
+    <div id="comments"></div>
+    <!-- Utterances JavaScript 代码 -->
+    <script src="https://utteranc.es/client.js"
+        repo="BG4JTS.github.io"
+        issue-term="pathname"
+        label="Comments"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+    </script>
+
+  </footer>
+</body>
+</html>
