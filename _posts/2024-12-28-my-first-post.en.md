@@ -6,7 +6,7 @@ categories: ["Jekyll", "Tutorial"]
 lang: en
 ---
 {% include lang.html %}
-<p>Welcome to my blog. This is my first post.</p>
+<p>Welcome to my blog. This is my first post: )</p>
 
 <script src="https://utteranc.es/client.js"
         repo="BG4JTS.github.io"
