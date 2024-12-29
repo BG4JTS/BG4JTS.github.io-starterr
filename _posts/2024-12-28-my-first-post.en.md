@@ -10,3 +10,13 @@ lang: en
 
 --END--
 
+<script src="https://utteranc.es/client.js"
+        repo="BG4JTS.github.io"
+        issue-term="pathname"
+        label="Comments"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+	</script>
+
+
