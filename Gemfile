@@ -17,4 +17,6 @@ gem 'csv'
 gem 'base64'
 gem 'jekyll-include-cache'
 gem 'jekyll-minibundle'
+gem 'jekyll-analytics'
+
 # gem 'jekyll-multiple-languages-plugin'

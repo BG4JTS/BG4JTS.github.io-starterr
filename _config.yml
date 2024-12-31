@@ -236,12 +236,16 @@ gitalk:
   admin: ['your_username']
   distractionFreeMode: false
 
+intensedebate_comments: true
 
+kramdown:
+  input: GFM
 
-# plugins:
+  plugins:
 # #  - jekyll-multiple-languages-plugin
 #   - jekyll-minibundle
 #   - jekyll-include-cache
+  - jekyll-analytics
 
 # #-------------Jekyll Minibundl-------------
 # minibundle: true
