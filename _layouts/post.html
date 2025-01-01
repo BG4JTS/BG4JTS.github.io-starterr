@@ -38,7 +38,7 @@ script_includes:
 
       {% if page.image %}
         {% capture src %}src="{{ page.image.path | default: page.image }}"{% endcapture %}
-        {% capture class %}class="preview-img{% if page.image.no_bg %}{{ ' no-bg' }}{% endif %}"{% endcapture %}
+        {% capture class %}class="preview-img{% if page.image.no_bg %}{{ 'no-bg' }}{% endif %}"{% endcapture %}
         {% capture alt %}alt="{{ page.image.alt | xml_escape | default: "Preview Image" }}"{% endcapture %}
 
         {% if page.image.lqip %}
@@ -46,7 +46,7 @@ script_includes:
         {% endif %}
 
         <div class="mt-3 mb-3">
-          <img {{ src }} {{ class }} {{ alt }} w="1200" h="630" {{ lqip }}>
+          <img {{ src }} {{ class }} {{ alt }} w="1200" h="630" {{ lqip }} >
           {%- if page.image.alt -%}
             <figcaption class="text-center pt-2 pb-2">{{ page.image.alt }}</figcaption>
           {%- endif -%}
@@ -106,7 +106,7 @@ script_includes:
       </button>
     </div>
 
-    <button id="toc-solo-trigger" type="button" class="toc-trigger btn btn-outline-secondary btn-sm">
+    <button id="toc-solo-trigger" type="button" class="toc-trigger btn-outline-secondary btn-sm">
       <span class="label ps-2 pe-1">{{- site.data.locales[lang].panel.toc -}}</span>
       <i class="fa-solid fa-angle-right fa-fw"></i>
     </button>
@@ -146,7 +146,7 @@ script_includes:
           <a
             href="{{ site.baseurl }}/tags/{{ tag | slugify | url_encode }}/"
             class="post-tag no-text-decoration"
-          >
+            >
             {{- tag -}}
           </a>
         {% endfor %}
@@ -162,10 +162,10 @@ script_includes:
       <div class="license-wrapper">
         {% if site.data.locales[lang].copyright.license.template %}
           {% capture _replacement %}
-        <a href="{{ site.data.locales[lang].copyright.license.link }}">
-          {{ site.data.locales[lang].copyright.license.name }}
-        </a>
-        {% endcapture %}
+          <a href="{{ site.data.locales[lang].copyright.license.link }}">
+            {{ site.data.locales[lang].copyright.license.name }}
+          </a>
+          {% endcapture %}
 
           {{ site.data.locales[lang].copyright.license.template | replace: ':LICENSE_NAME', _replacement }}
         {% endif %}
@@ -176,4 +176,15 @@ script_includes:
     <!-- .post-tail-bottom -->
   </div>
   <!-- div.post-tail-wrapper -->
-</article>
+  {% if page.comments %}
+  <div id="utterances-comments"></div>
+  <script src="https://utteranc.es/client.js"
+        repo="BG4JTS/BG4JTS.github.io"
+        issue-term="pathname"
+        label="Comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+  </script>
+  {% endif %}
+  </article>
