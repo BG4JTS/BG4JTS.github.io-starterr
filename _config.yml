@@ -236,7 +236,12 @@ gitalk:
   admin: ['your_username']
   distractionFreeMode: false
 
+
 intensedebate_comments: true
+
+assets:
+  destination: "/assets"
+  compression: false
 
 kramdown:
   input: GFM
